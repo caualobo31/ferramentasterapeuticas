@@ -1633,7 +1633,10 @@
       if (window.fbq) { try { fbq('track', 'InitiateCheckout'); } catch(e) {} }
       try {
         var dest = new URL(url);
-        new URLSearchParams(window.location.search).forEach(function(v, k) {
+        // Usa os UTMs resolvidos pela UTMify (persistidos por 7 dias + fbclid/gclid/xcod/sck)
+        // e cai para a query string atual caso o script da UTMify não tenha carregado.
+        var params = (window.utmParams instanceof URLSearchParams) ? window.utmParams : new URLSearchParams(window.location.search);
+        params.forEach(function(v, k) {
           dest.searchParams.set(k, v);
         });
         window.location.href = dest.toString();
