@@ -758,14 +758,40 @@
       margin-right: auto;
     }
     .t-track-wrapper { flex: 1; overflow: hidden; border-radius: 14px; }
-    .t-track { display: flex; transition: transform .45s cubic-bezier(.4,0,.2,1); }
-    .t-slide { min-width: 100%; }
-    .t-img {
+    .t-track { display: flex; align-items: stretch; transition: transform .45s cubic-bezier(.4,0,.2,1); }
+    .t-slide { min-width: 100%; display: flex; align-items: center; justify-content: center; padding: 4px; }
+    .testimonial-card {
+      background: var(--white);
+      border: 1px solid rgba(0,0,0,0.07);
+      border-radius: 16px;
+      padding: 36px 32px;
+      max-width: 460px;
       width: 100%;
-      max-height: 480px;
-      object-fit: contain;
-      border-radius: 12px;
-      display: block;
+      text-align: center;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+    }
+    .testimonial-stars {
+      color: var(--gold);
+      font-size: 14px;
+      letter-spacing: 3px;
+      margin-bottom: 18px;
+    }
+    .testimonial-quote {
+      font-size: 15px;
+      color: var(--body);
+      line-height: 1.7;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+    .testimonial-name {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--dark);
+    }
+    .testimonial-role {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 2px;
     }
     .t-arrow {
       flex-shrink: 0;
@@ -1240,15 +1266,30 @@
           <div class="t-track">
 
             <div class="t-slide">
-              <img src="imagens/dep1.webp" alt="Depoimento 1" class="t-img" loading="lazy">
+              <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-quote">"Gostei muito da variedade dos materiais. Já consegui usar vários recursos nas sessões e isso tem me ajudado bastante na condução."</p>
+                <p class="testimonial-name">Mariana Souza</p>
+                <p class="testimonial-role">Psicóloga Clínica</p>
+              </div>
             </div>
 
             <div class="t-slide">
-              <img src="imagens/dep4.webp" alt="Depoimento 4" class="t-img" loading="lazy">
+              <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-quote">"O material está muito bem organizado e traz ideias práticas para usar com pacientes adultos no consultório."</p>
+                <p class="testimonial-name">Juliana Ferreira</p>
+                <p class="testimonial-role">Psicóloga Clínica</p>
+              </div>
             </div>
 
             <div class="t-slide">
-              <img src="imagens/dep2.webp" alt="Depoimento 2" class="t-img" loading="lazy">
+              <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-quote">"Os recursos são bonitos, úteis e fáceis de aplicar. Excelente para ter mais repertório nas sessões."</p>
+                <p class="testimonial-name">Camila Rocha</p>
+                <p class="testimonial-role">Psicóloga Clínica</p>
+              </div>
             </div>
 
             <!-- PARA ADICIONAR MAIS: copie um bloco acima e adicione um <button class="t-dot"> nos dots abaixo -->
